@@ -10,6 +10,14 @@
 </head>
 <body>
     <h1>Welcome to Hassine & Noomen Shop</h1>
-    
+    <fieldset>
+        <legend>Create User Account</legend>
+        <input id="login" type="text" placeholder="Enter a username...">
+        <input id="email" type="email" placeholder="Enter your email..."><br>
+        <input id="pass" type="password" placeholder="Enter a password...">
+        <input id="confirmPass" type="password" placeholder="Confirm password..." oninput="checkPass()">
+        <button id="btn" type="button">Create Account</button>
+    </fieldset>
+    <div id="message"></div>
 </body>
 </html>
