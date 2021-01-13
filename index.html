@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassine & Noomen Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="shop.js"></script>
+</head>
+<body>
+    <h1>Welcome to Hassine & Noomen Shop</h1>
+    <fieldset>
+        <legend>Create User Account</legend>
+        <input id="login" type="text" placeholder="Enter a username...">
+        <input id="email" type="email" placeholder="Enter your email..."><br>
+        <input id="pass" type="password" placeholder="Enter a password...">
+        <input id="confirmPass" type="password" placeholder="Confirm password..." oninput="checkPass()">
+        <button id="btn" type="button">Create Account</button>
+    </fieldset>
+    <div id="message"></div>
+</body>
+</html>
