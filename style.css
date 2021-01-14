@@ -7,7 +7,13 @@ input, button {
     padding: 7px;
 }
 
-fieldset {
+fieldset, #message {
     margin-bottom: 20px;
-    width: 500px;
+    padding: 7px;
+    width: 400px;
+}
+
+label {
+    width: 200px;
+    display: inline-block;
 }
