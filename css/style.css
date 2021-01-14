@@ -9,8 +9,12 @@ input, button {
 
 fieldset, #message {
     margin-bottom: 20px;
-    padding: 7px;
+    padding: 10px;
     width: 400px;
+}
+
+#message {
+    border-radius: 7px;
 }
 
 label {

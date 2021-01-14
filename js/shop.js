@@ -1,5 +1,3 @@
-
-
 var createAccount = function(){
     var user = {};
     if(document.getElementById("firstName").value && document.getElementById("lastName").value && document.getElementById("email").value && document.getElementById("pass").value) {
@@ -19,8 +17,8 @@ var createAccount = function(){
         }
     }
     else {
-        document.getElementById("message").style.backgroundColor = "orange"
-        document.getElementById("message").style.color = "red"
+        document.getElementById("message").style.backgroundColor = "lightgrey"
+        document.getElementById("message").style.color = "blue"
         document.getElementById("message").innerText="Please fill up the form to proceed...!";
     }
 }
