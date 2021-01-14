@@ -1,3 +1,6 @@
+window.onload= function(){
+
+
 const login = document.getElementById("login");
 const email = document.getElementById("email");
 const pass = document.getElementById("pass");
@@ -12,4 +15,14 @@ function checkPass() {
 
     console.log(pass.value);
     console.log(confirmPass.value);
+}
+
+
+
+
+
+
+
+
+
 }
