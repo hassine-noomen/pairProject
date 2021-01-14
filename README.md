@@ -9,4 +9,4 @@ The project consist of creating an e-Shop:
 
 2- Once the user account is created, the user will be redirected to a Login page where he needs to enter his login and password to be able to start adding items to his cart.
 
-3- the use should be able to modify his cart by adding or removing items.
+3- The use should be able to modify his cart by adding or removing items.
