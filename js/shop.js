@@ -1,3 +1,4 @@
+//Creating new account
 var createAccount = function(){
     var user = {};
     if(document.getElementById("firstName").value && document.getElementById("lastName").value && document.getElementById("email").value && document.getElementById("pass").value) {
@@ -15,10 +16,9 @@ var createAccount = function(){
             localStorage.setItem('lastName',user.lastName);
             localStorage.setItem('email',user.email);
             localStorage.setItem('pass',user.pass);
-            //location.reload();
             document.getElementById("message").style.backgroundColor = "lightgreen"
             document.getElementById("message").style.color = "green"
-            document.getElementById("message").innerHTML = "Thank you " + user.firstName + " " + user.lastName + ". Your account successfully created. <a href='html/login.html'>Log In</a>";
+            document.getElementById("message").innerHTML = "Thank you " + user.firstName + " " + user.lastName + ". Your account successfully created. <a href='html/login.html'>Login now...</a>";
         }
     }
     else {
@@ -28,6 +28,7 @@ var createAccount = function(){
     }
 }
 
+//Logging in existing account
 var loginAccount = function(){
     var user = {};
     if(document.getElementById("email").value && document.getElementById("pass").value) {
@@ -37,9 +38,7 @@ var loginAccount = function(){
             document.getElementById("message").innerText="Wrong email or password...!";
         } 
         else {
-            
             location.replace("shop.html")
-            
         }
     }
     else {
