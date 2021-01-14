@@ -3,9 +3,9 @@ h1 {
     color: blue;
 }
 
-/* input, button {
+input, button {
     padding: 8px;
-} */
+}
 
 fieldset, #message {
     margin-bottom: 20px;
