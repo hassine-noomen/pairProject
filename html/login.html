@@ -10,23 +10,66 @@
     <script src="../js/shop.js"></script>
     
 </head>
+
 <body>
-    <div id="logo"><a href=../index.html><img src="../img/h&n_logo.png" title="H&N e-Shop"></a></div>
+    <div id="bloc_page">
+        <header>
+            <div id="logo"><a href=../index.html><img src="../img/h&n_logo.png" title="H&N e-Shop"></a></div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#products">Our products</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+        </nav>
 
-    <div id="message"></div>
+        <section>
+            <article>
+                <div id="about">
+                    <div class="title">About us</div>
+                    <div class="content">H&N Café is an e-Cafe Shop created by Hassine Basla Turki and Noomen Krichen as a pair project during the Cohert-11 class in RBK ReBootKamp.</div>
+                </div>
+                <div id="products">
+                    <div class="title">Our products</div>
+                    <div class="content">
+                        coffee express, coffee capuccino, miniral water, soda, cake, croissant, panini
+                    </div>
+                </div>
+                <div id="contact">
+                    <div class="title">Contact us</div>
+                    <div class="content">Send us email at <a href="mailto:contact@hn.tn">contact@hn.tn</a></div>
+                </div>
+            </article>
+            <aside>
+                <div id="message"></div>
 
-    <div id="input">
-        <fieldset>
-            <legend>Login Account</legend>
-            <label for="email">E-mail:</label>
-            <input id="email" type="email" placeholder="Enter your email..."><br>
-            <label for="pass">Password:</label>
-            <input id="pass" type="password" placeholder="Enter your password..."><br>
-            <button id="btn" type="button" onclick="loginAccount()">Log In</button>
-        </fieldset>
+                <div id="input">
+                    <fieldset>
+                        <legend>Login Account</legend>
+                        <label for="email">E-mail:</label>
+                        <input id="email" type="email" placeholder="Enter your email..."><br>
+                        <label for="pass">Password:</label>
+                        <input id="pass" type="password" placeholder="Enter your password..."><br>
+                        <button id="btn" type="button" onclick="loginAccount()">Log In</button>
+                    </fieldset>
+                </div>
+            </aside>
+        </section>
+
+        <footer>
+            <div align="center">2021 &copy; H&N Cafe</div>
+        </footer>
+
+
+
+
+
+
+
     </div>
-    
-    
 
 </body>
+
 </html>
