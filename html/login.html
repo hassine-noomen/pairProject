@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hassine & Noomen e-Shop</title>
-    <link rel="icon" href="img/h&n_logo.png">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Hassine & Noomen e-Shop - Login</title>
+    <link rel="icon" href="../img/h&n_logo.png">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/shop.js" async></script>
+    <script src="../js/shop.js"></script>
     
 </head>
+
 <body>
     <div id="bloc_page">
         <header>
-            <div id="logo"><a href=index.html><img src="img/h&n_logo.png" title="H&N e-Shop" id="logo_img"></a></div>
+            <div id="logo"><a href=../index.html><img src="../img/h&n_logo.png" title="H&N e-Shop" id="logo_img"></a></div>
         </header>
         
         <nav>
@@ -42,24 +43,16 @@
                 </div>
             </article>
             <aside>
-                <div>Already have an account: <a href="html/login.html">Login</a></div>
-                    
                 <div id="message"></div>
-    
+
                 <div id="input">
                     <fieldset>
-                        <legend>Create User Account</legend>
-                        <label for="firstName">First Name:</label>
-                        <input id="firstName" type="text" placeholder="Enter your firstname..."><br>
-                        <label for="lastName">Last Name:</label>
-                        <input id="lastName" type="text" placeholder="Enter your lastname..."><br>
+                        <legend>Login Account</legend>
                         <label for="email">E-mail:</label>
                         <input id="email" type="email" placeholder="Enter your email..."><br>
                         <label for="pass">Password:</label>
-                        <input id="pass" type="password" placeholder="Enter a password..."><br>
-                        <label for="confirmPass">Confirm your password:</label>
-                        <input id="confirmPass" type="password" placeholder="Confirm password..."><br>
-                        <button id="btn" type="button" onclick="createAccount()">Create Account</button>
+                        <input id="pass" type="password" placeholder="Enter your password..."><br>
+                        <button id="btn" type="button" onclick="loginAccount()">Log In</button>
                     </fieldset>
                 </div>
             </aside>
@@ -77,12 +70,6 @@
 
     </div>
 
-
-
-
-    
-    
-    
-
 </body>
+
 </html>
