@@ -92,7 +92,7 @@ function guessFunction(){
     else{
         alert('Nope! That wasnt it! Maybe next time, the TOTAL is '+tt+' TND')
     }
-
+}
     
    
 
