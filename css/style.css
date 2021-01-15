@@ -96,7 +96,8 @@ article {
     display: inline-block;
     vertical-align: top;
     text-align: justify;
-    max-width: 520px;
+    width: 650px;
+    max-width: 700px;
     padding: 5px;
 }
  
