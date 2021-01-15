@@ -4,10 +4,14 @@ h1 {
 }
 
 input, button {
-    padding: 8px;
+    padding: 7px;
 }
 
-fieldset, #message {
+#add {
+    padding: 2px;
+}
+
+fieldset {
     margin-bottom: 20px;
     padding: 10px;
     width: 400px;
@@ -15,6 +19,12 @@ fieldset, #message {
 
 #message {
     border-radius: 7px;
+    padding: 5px;
+    width: 420px;
+}
+
+#price, #description {
+    font-size: small;
 }
 
 label {
@@ -35,3 +45,86 @@ div {
     width: 150px;
     display: inline-block;
 }
+
+.title {
+    flood-color: crimson;
+    font-size: x-large;
+    font-family: fantasy;
+}
+
+
+
+
+nav {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    
+}
+
+nav li {
+    display: block;
+    font-family: 'Arial';
+    font-size: 14px;
+    padding: 0.2em;
+    border: 1px solid transparent;
+}
+ 
+nav li:hover {
+    border: 1px solid grey;
+    border-radius: 3px;
+    background-color: lightgrey;
+}
+ 
+header a:link, header a:hover, header a:visited, header a:active {
+    text-decoration: none;
+    color: darkblue;
+}
+ 
+header {
+    padding: 20px;
+}
+ 
+section {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+    padding: 5px;
+}
+ 
+article {
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+    max-width: 520px;
+    padding: 5px;
+}
+ 
+aside {
+    display: inline-block;
+    vertical-align: top;
+    width: 440px;
+    background-color: lightgrey;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    color: black;
+    font-size: 0.9em;
+}
+ 
+img {
+    max-width: 100%;
+    height: auto;
+    border: none; 
+}
+ 
+footer {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+} 
