@@ -11,6 +11,13 @@ input, button {
     padding: 2px;
 }
 
+#cartlist, #btn_remove {
+    font-size: small;
+    display: inline-block;
+    width: 120px;
+    padding: 0px;
+}
+
 fieldset {
     margin-bottom: 20px;
     padding: 10px;

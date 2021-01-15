@@ -56,15 +56,18 @@ var greeting = function() {
 
 //Adding items to cart
 var itemList = []
-var addItem = function() {
+var addItem = function(itemName) {
     var item = {};
     
     localStorage.setItem("cart",itemList);
     
-    item.description = document.getElementById("description").innerText;
-    item.price = parseFloat(document.getElementById("price").innerText.slice(4));
-    
+    //item.pictureSrc = document.getElementById(itemName).children[0].innerHTML;
+    item.description = document.getElementById(itemName).children[1].innerText;
+    item.price = parseFloat(document.getElementById(itemName).children[2].innerText.slice(4));
+
     itemList.push(item);
+    
+    //console.log(item.pictureSrc)
 
     var total = 0;
     for(i=0;i<itemList.length;i++){
@@ -72,24 +75,9 @@ var addItem = function() {
     }
     total=total.toFixed(3);
 
-    
-    // var cartItemsContainer = document.getElementById("shop").getElementsByClassName("items");
-    // //var items = cartItemsContainer.getElementsbyClassName("items");
-    // for(i=0;i<cartItemsContainer.length;i++){
-    //     item = cartItemsContainer[i].innerText;
-    //     console.log(item)
-    // }
-
-    // console.log(cartItemsContainer);
-    // //console.log(items);
-
-
-
-    $("#cartList").append("<li>"+item.description + " - TND " + item.price+"</li>");
+    $("#cartList").append("<li><div id='cartlist'>"+item.description + "</div> - <div id='cartlist'>TND " + item.price+"</div></li>");
     
     document.getElementById("total").innerHTML="<strong>Total: TND </strong>"+total;
     $("#total").append('<br><br><button id="pay" type="button" onclick="">Pay now</button>');
-
-    
 
 }
