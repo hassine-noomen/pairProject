@@ -18,28 +18,59 @@
         </header>
         
         <nav>
+            <h1>Welcome to Hassine & Noomen e-Café Shop</h1>
             <ul>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#products">Our products</a></li>
-                <li><a href="#contact">Contact us</a></li>
+                <li><a href="../index.html#about">About us</a></li>
+                <li><a href="../index.html#products">Our products</a></li>
+                <li><a href="../index.html#contact">Contact us</a></li>
             </ul>
         </nav>
 
         <section>
             <article>
-                <div id="about">
-                    <div class="title">About us</div>
-                    <div class="content">H&N Café is an e-Cafe Shop created by Hassine Basla Turki and Noomen Krichen as a pair project during the Cohert-11 class in RBK ReBootKamp.</div>
-                </div>
                 <div id="products">
                     <div class="title">Our products</div>
                     <div class="content">
-                        coffee express, coffee capuccino, miniral water, soda, cake, croissant, panini
+                        
+                        <div id="shop" align="center">
+                            <div id="item1" class="items">
+                                <div id="photo"><img src="../img/express.jpg" title="Coffee Express"></div>
+                                <div id="description">Coffee Express</div>
+                                <div id="price">TND 5.520</div>
+                                <button id="add" type="button" onclick="addItem('item1')" disabled>Add</button>
+                            </div>
+                            <div id="item2" class="items">
+                                <div id="photo"><img src="../img/capuccino.jpg" title="Coffee Capuccino"></div>
+                                <div id="description">Coffee Capuccino</div>
+                                <div id="price">TND 6.175</div>
+                                <button id="add" type="button" onclick="addItem('item2')" disabled>Add</button>
+                            </div>
+                            <div id="item3" class="items">
+                                <div id="photo"><img src="../img/water.jpg" title="Miniral Water"></div>
+                                <div id="description">Miniral Water</div>
+                                <div id="price">TND 1.280</div>
+                                <button id="add" type="button" onclick="addItem('item3')" disabled>Add</button>
+                            </div>
+                            <div id="item4" class="items">
+                                <div id="photo"><img src="../img/soda.jpg" title="Soda"></div>
+                                <div id="description">Soda</div>
+                                <div id="price">TND 3.999</div>
+                                <button id="add" type="button" onclick="addItem('item4')" disabled>Add</button>
+                            </div>
+                            <div id="item5" class="items">
+                                <div id="photo"><img src="../img/cake.jpg" title="Cake"></div>
+                                <div id="description">Cake</div>
+                                <div id="price">TND 7.825</div>
+                                <button id="add" type="button" onclick="addItem('item5')" disabled>Add</button>
+                            </div>
+                            <div id="item6" class="items">
+                                <div id="photo"><img src="../img/croissant.jpg" title="Croissant"></div>
+                                <div id="description">Croissant</div>
+                                <div id="price">TND 6.290</div>
+                                <button id="add" type="button" onclick="addItem('item6')" disabled>Add</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div id="contact">
-                    <div class="title">Contact us</div>
-                    <div class="content">Send us email at <a href="mailto:contact@hn.tn">contact@hn.tn</a></div>
                 </div>
             </article>
             <aside>
@@ -52,7 +83,7 @@
                         <input id="email" type="email" placeholder="Enter your email..."><br>
                         <label for="pass">Password:</label>
                         <input id="pass" type="password" placeholder="Enter your password..."><br>
-                        <button id="btn" type="button" onclick="loginAccount()">Log In</button>
+                        <button id="btn" type="button" onclick="loginAccount()">Login</button>
                     </fieldset>
                 </div>
             </aside>
