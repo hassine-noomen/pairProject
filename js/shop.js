@@ -76,13 +76,29 @@ var addItem = function(itemName) {
     $("#cartList").append("<li><div id='cartlist'>"+item.description + "</div> - <div id='cartlist'>TND " + item.price+"</div><button id='btn_remove' type='button' onclick='removeItem()'>Remove</button></li>");
     
     document.getElementById("total").innerHTML="<strong>Total: TND </strong>"+total;
-    
-    $("#total").append('<br><br><button id="pay" type="button" onclick="">Pay now</button>');
+
+    $("#total").append('<br><br><button id="pay" type="button" onclick="guessFunction()">Pay now</button>');
 
 }
+
+function guessFunction(){
+    var TT = document.getElementById('total').innerText.slice(11);
+    var tt = parseFloat(TT)
+    var y = Math.floor(Math.random() * 5 + 1); 
+    var number = prompt('Hello dear customer, choose a number between 1 and 5, if you guess the right number you will get a 80% discount', 'choose a number between 1 and 5');
+    if(y === number){
+        alert('Congratulation, you guess the number! the TOTAL now is '+tt*0.8+' TND')
+    }
+    else{
+        alert('Nope! That wasnt it! Maybe next time, the TOTAL is '+tt+' TND')
+    }
+
+    
+   
 
 //Removing item from cart
 var removeItem = function(){
     var list = document.getElementById("cartList");
     list.removeChild(list.childNodes[0]);
+
 }
