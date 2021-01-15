@@ -47,3 +47,23 @@ var loginAccount = function(){
         document.getElementById("message").innerText="Please fill up with your email and password...!";
     }
 }
+
+//Say hello to the logged in user
+var greeting = function() {
+    document.getElementById("user").innerText="Hello " + localStorage.firstName+" "+localStorage.lastName;
+    document.getElementById("cart").innerHTML="Your order is here: <br><ol id='cartList'></ol>";
+}
+
+//Adding items to cart
+var addItem = function() {
+    var item = {};
+    item.description = document.getElementById("description").innerText;
+    item.price = document.getElementById("price").innerText;
+
+    console.log(document.getElementById("description"))
+
+    $("#cartList").append("<li>"+item.description + " - " + item.price+"</li>");
+
+    
+
+}
