@@ -1,5 +1,5 @@
-h1 {
-    text-align: center;
+#total, #pay {
+    text-align: right;
     color: blue;
 }
 

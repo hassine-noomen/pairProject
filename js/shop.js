@@ -50,19 +50,45 @@ var loginAccount = function(){
 
 //Say hello to the logged in user
 var greeting = function() {
-    document.getElementById("user").innerText="Hello " + localStorage.firstName+" "+localStorage.lastName;
+    document.getElementById("user").innerHTML="<strong>Hello " + localStorage.firstName+" "+localStorage.lastName+"</strong>";
     document.getElementById("cart").innerHTML="Your order is here: <br><ol id='cartList'></ol>";
 }
 
 //Adding items to cart
+var itemList = []
 var addItem = function() {
     var item = {};
+    
+    localStorage.setItem("cart",itemList);
+    
     item.description = document.getElementById("description").innerText;
-    item.price = document.getElementById("price").innerText;
+    item.price = parseFloat(document.getElementById("price").innerText.slice(4));
+    
+    itemList.push(item);
 
-    console.log(document.getElementById("description"))
+    var total = 0;
+    for(i=0;i<itemList.length;i++){
+        total+=itemList[i].price;
+    }
+    total=total.toFixed(3);
 
-    $("#cartList").append("<li>"+item.description + " - " + item.price+"</li>");
+    
+    // var cartItemsContainer = document.getElementById("shop").getElementsByClassName("items");
+    // //var items = cartItemsContainer.getElementsbyClassName("items");
+    // for(i=0;i<cartItemsContainer.length;i++){
+    //     item = cartItemsContainer[i].innerText;
+    //     console.log(item)
+    // }
+
+    // console.log(cartItemsContainer);
+    // //console.log(items);
+
+
+
+    $("#cartList").append("<li>"+item.description + " - TND " + item.price+"</li>");
+    
+    document.getElementById("total").innerHTML="<strong>Total: TND </strong>"+total;
+    $("#total").append('<br><br><button id="pay" type="button" onclick="">Pay now</button>');
 
     
 
