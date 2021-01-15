@@ -56,28 +56,33 @@ var greeting = function() {
 
 //Adding items to cart
 var itemList = []
+
 var addItem = function(itemName) {
     var item = {};
     
     localStorage.setItem("cart",itemList);
     
-    //item.pictureSrc = document.getElementById(itemName).children[0].innerHTML;
     item.description = document.getElementById(itemName).children[1].innerText;
     item.price = parseFloat(document.getElementById(itemName).children[2].innerText.slice(4));
 
     itemList.push(item);
     
-    //console.log(item.pictureSrc)
-
     var total = 0;
     for(i=0;i<itemList.length;i++){
         total+=itemList[i].price;
     }
     total=total.toFixed(3);
 
-    $("#cartList").append("<li><div id='cartlist'>"+item.description + "</div> - <div id='cartlist'>TND " + item.price+"</div></li>");
+    $("#cartList").append("<li><div id='cartlist'>"+item.description + "</div> - <div id='cartlist'>TND " + item.price+"</div><button id='btn_remove' type='button' onclick='removeItem()'>Remove</button></li>");
     
     document.getElementById("total").innerHTML="<strong>Total: TND </strong>"+total;
+    
     $("#total").append('<br><br><button id="pay" type="button" onclick="">Pay now</button>');
 
+}
+
+//Removing item from cart
+var removeItem = function(){
+    var list = document.getElementById("cartList");
+    list.removeChild(list.childNodes[0]);
 }
