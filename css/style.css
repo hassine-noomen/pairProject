@@ -1,6 +1,12 @@
 #logo_img {
-    height: 150px;
-    width: 150px;
+    height: 80px;
+    width: 80px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: none; 
 }
 
 #total, #pay {
@@ -46,7 +52,8 @@ label {
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: white;
+    background-image: url(../img/background.jpg);
+    text-align: center;
 }
 
 div {
@@ -59,25 +66,38 @@ div {
 }
 
 .title {
-    flood-color: crimson;
     font-size: x-large;
     font-family: fantasy;
 }
 
+header {
+    display: inline-block;
+    padding: 0px;
+    width: 200px;
+}
 
-
+header a:link, header a:hover, header a:visited, header a:active {
+    text-decoration: none;
+    color: darkblue;
+}
 
 nav {
     display: inline-block;
     vertical-align: top;
-    padding: 5px;
-    
+    padding: 5px; 
+    width: 1000px;
+}
+
+h1 {
+    color: cornsilk;
 }
 
 nav li {
-    display: block;
+    display: inline;
     font-family: 'Arial';
     font-size: 14px;
+    color: white;
+    font-weight: bold;
     padding: 0.2em;
     border: 1px solid transparent;
 }
@@ -86,15 +106,6 @@ nav li:hover {
     border: 1px solid grey;
     border-radius: 3px;
     background-color: lightgrey;
-}
- 
-header a:link, header a:hover, header a:visited, header a:active {
-    text-decoration: none;
-    color: darkblue;
-}
- 
-header {
-    padding: 20px;
 }
  
 section {
@@ -108,9 +119,11 @@ article {
     display: inline-block;
     vertical-align: top;
     text-align: justify;
-    width: 650px;
+    width: 660px;
     max-width: 700px;
     padding: 5px;
+    background-color: white;
+    border-radius: 5px;
 }
  
 aside {
@@ -124,12 +137,6 @@ aside {
     margin-left: 10px;
     color: black;
     font-size: 0.9em;
-}
- 
-img {
-    max-width: 100%;
-    height: auto;
-    border: none; 
 }
  
 footer {
