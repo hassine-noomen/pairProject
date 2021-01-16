@@ -27,7 +27,6 @@ var createAccount = function(){
         document.getElementById("message").innerText="Please fill up the form to proceed...!";
     }
 }
-
 //Logging in existing account
 var loginAccount = function(){
     var user = {};
@@ -47,24 +46,21 @@ var loginAccount = function(){
         document.getElementById("message").innerText="Please fill up with your email and password...!";
     }
 }
-
 //Say hello to the logged in user
 var greeting = function() {
     document.getElementById("user").innerHTML="<strong>Hello " + localStorage.firstName+" "+localStorage.lastName+"</strong>";
     document.getElementById("cart").innerHTML="Your order is here: <br><ol id='cartList'></ol>";
 }
-
 //Adding items to cart
 var itemList = []
-
+var i =0 // ==> idex of the item in the local storage;
 var addItem = function(itemName) {
-    var item = {};
-    
-    localStorage.setItem("cart",itemList);
-    
+    var item = {};  
+    localStorage.setItem("cart",itemList);   
+    localStorage.setItem("id",i)
+    i=i+1;
     item.description = document.getElementById(itemName).children[1].innerText;
     item.price = parseFloat(document.getElementById(itemName).children[2].innerText.slice(4));
-
     itemList.push(item);
     
     var total = 0;
@@ -73,32 +69,33 @@ var addItem = function(itemName) {
     }
     total=total.toFixed(3);
 
-    $("#cartList").append("<li><div id='cartlist'>"+item.description + "</div> - <div id='cartlist'>TND " + item.price+"</div><button id='btn_remove' type='button' onclick='removeItem()'>Remove</button></li>");
-    
+    $("#cartList").append("<li id='"+localStorage.id+"'><div id='cartlist'>"+item.description + "</div> - <div id='cartlist'>TND " + item.price+"</div><button id='btn_remove' type='button' onclick='removeItem("+localStorage.id+")'>Remove</button></li>"); 
     document.getElementById("total").innerHTML="<strong>Total: TND </strong>"+total;
-
-    $("#total").append('<br><br><button id="pay" type="button" onclick="guessFunction()">Pay now</button>');
-
+    $("#total").append('<br><br><button id="pay" type="button" onclick="guessFunction()">PaY nOw</button>');
 }
 
+//Removing item from cart
+var removeItem = function(id){
+    var list = document.getElementById(id);
+   var prix =parseFloat(list.children[1].innerText.slice(4))
+   var total = parseFloat(document.getElementById('total').innerText.slice(11));
+   var NewTotal =total-prix
+   document.getElementById("total").innerHTML="<strong>Total: TND </strong>"+NewTotal.toFixed(3);
+   list.remove();
+   $("#total").append('<br><br><button id="pay" type="button" onclick="guessFunction()">PaY nOw</button>');
+}
+
+// Guess number 
 function guessFunction(){
     var TT = document.getElementById('total').innerText.slice(11);
-    var tt = parseFloat(TT)
+    var tt = parseFloat(TT);
     var y = Math.floor(Math.random() * 5 + 1); 
-    var number = prompt('Hello dear customer, choose a number between 1 and 5, if you guess the right number you will get a 80% discount', 'choose a number between 1 and 5');
-    if(y === number){
-        alert('Congratulation, you guess the number! the TOTAL now is '+tt*0.8+' TND')
+    console.log('The guessed number is', y);
+    var number = prompt('Hello dear customer, choose a number between 1 and 5, if you guess the right number you will get a 90% discount', 'choose a number between 1 and 5');
+    if(y == number){
+        alert('Congratulation, you guess the number! the TOTAL now is '+((tt - (tt*0.9)).toFixed(3))+' TND');
     }
     else{
-        alert('Nope! That wasnt it! Maybe next time, the TOTAL is '+tt+' TND')
+        alert('Nope! That wasnt it! Maybe next time, the TOTAL is '+tt+' TND');
     }
-
-    
-   
-
-//Removing item from cart
-var removeItem = function(){
-    var list = document.getElementById("cartList");
-    list.removeChild(list.childNodes[0]);
-
 }
