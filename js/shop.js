@@ -83,6 +83,8 @@ var removeItem = function(id){
    document.getElementById("total").innerHTML="<strong>Total: TND </strong>"+NewTotal.toFixed(3);
    list.remove();
    $("#total").append('<br><br><button id="pay" type="button" onclick="guessFunction()">PaY nOw</button>');
+//    itemList.splice
+
 }
 
 // Guess number 
