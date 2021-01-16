@@ -1,6 +1,4 @@
-########################################
 #######  Hassine & Noomen e-Shop #######
-########################################
 
 This is our first pair project between Hassin and Noomen
 
